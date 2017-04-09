@@ -1,0 +1,24 @@
+body {
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PingFang SC";
+}
+
+#root {
+  margin: 100px auto;
+  width: 300px;
+}
+
+
+.todo {
+  padding: 5px 10px;
+  background-color: #dddddd;
+}
+
+.todo-list {
+
+}
