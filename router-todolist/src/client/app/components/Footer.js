@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 //import FilterLink from '../containers/FilterLink'
 import LinkComponent from '../components/Link'
 import * as todoFilters from '../constants/TodoFilters'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const FILTER_TITLES = {
     [todoFilters.SHOW_ALL]: 'All',
@@ -24,7 +24,7 @@ class Footer extends Component {
             <div>
                 {Object.keys(FILTER_TITLES).map(
                     (filter) =>
-                        <Link to={filter === todoFilters.SHOW_ALL ? "" : filter}
+                        <NavLink to={'/' + FILTER_TITLES[filter]}
                               key={filter}
                               activeStyle={{
                               textDecoration: 'none',
@@ -33,7 +33,7 @@ class Footer extends Component {
                               onClick={() => this.props.onLinkClick(filter)}
                         >
                             {FILTER_TITLES[filter]}
-                        </Link>
+                        </NavLink>
                 )}
             </div>
         );

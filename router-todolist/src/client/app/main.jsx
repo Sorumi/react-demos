@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import { Router, Route } from 'react-router';
-import { HashRouter } from 'react-router-dom'
+import { HashRouter, BrowserRouter } from 'react-router-dom'
 
 import App from './containers/App'
 import reducer from './reducers/index'
@@ -24,9 +24,9 @@ let store = createStore(
 let rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
-        <HashRouter>
-            <Route path="/" component={App} />
-        </HashRouter>
+        <BrowserRouter>
+            <Route path="" component={App} />
+        </BrowserRouter>
     </Provider>,
     rootElement
 );
