@@ -41,14 +41,3 @@ class Footer extends Component {
 }
 
 export default Footer
-
-
-
-
-
-//<LinkComponent
-//filter={filter}
-//active={this.props.selectedFilter === filter}
-//onClick={() => this.props.onLinkClick(filter)}>
-//{FILTER_TITLES[filter]}
-//</LinkComponent>

@@ -42,7 +42,7 @@ function todos(state = [], action) {
                 {
                     id: state.reduce((maxId, todo)=>Math.max(maxId, todo.id), -1) + 1,
                     text: action.product.name,
-                    completed: false
+                    completed: action.product.completed
                 }
             ];
         default:

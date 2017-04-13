@@ -25,7 +25,7 @@ let rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
-            <Route path="" component={App} />
+            <Route path="/:filterName" component={App}/>
         </BrowserRouter>
     </Provider>,
     rootElement
