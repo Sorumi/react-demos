@@ -1,5 +1,5 @@
 {
-  "name": "webpack-todolist",
+  "name": "router-todolist",
   "version": "1.0.0",
   "description": "A todolist demo with webpack",
   "main": "index.js",

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+//import { BrowserRouter } from 'react-router-dom'
 
 import FilterFooter from './FilterFooter'
 import AddTodo from '../containers/AddTodo'
@@ -15,14 +16,15 @@ const FILTER_TITLES = {
     [todoFilters.SHOW_COMPLETED]: 'Completed'
 };
 
+//BrowserRouter.history.listen(location =>{
+//
+//});
 
 class App extends Component {
 
 
     componentDidMount() {
-        this.props.fetchTodo("0");
-        this.props.fetchTodo("1");
-        this.props.fetchTodo("2");
+        this.fetchTodos();
         let filter;
         let filterName = this.props.match.params.filterName;
         for (var key in FILTER_TITLES) {
@@ -33,6 +35,14 @@ class App extends Component {
         if (filter) {
             this.props.setFilter(filter);
         }
+    }
+
+
+
+    fetchTodos() {
+        this.props.fetchTodo("0");
+        this.props.fetchTodo("1");
+        this.props.fetchTodo("2");
     }
 
     render() {
