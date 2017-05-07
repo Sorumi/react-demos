@@ -1,4 +1,5 @@
 import fetch from 'dva/fetch';
+import { BASE_URL } from '../constants';
 
 function parseJSON(response) {
   return response.json();

@@ -3,12 +3,21 @@ import './index.css';
 
 import createLoading from 'dva-loading';
 
-import { browserHistory } from 'dva/router';
+import { browserHistory, hashHistory } from 'dva/router';
+
+import { useRouterHistory } from 'react-router'
+import { createHistory, createBrowserHistory} from 'history'
+
+const history = useRouterHistory(createHistory)({
+  basename: '/fxp/public'
+});
 
 // 1. Initialize
 const app = dva({
-  history: browserHistory,
+  history: hashHistory,
 });
+
+
 
 app.model(require("./models/users"));
 

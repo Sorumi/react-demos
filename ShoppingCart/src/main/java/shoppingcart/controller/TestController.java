@@ -16,7 +16,6 @@ import java.util.List;
  * Created by Sorumi on 17/3/28.
  */
 @Controller
-//@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 public class TestController {
